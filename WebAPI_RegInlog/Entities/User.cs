@@ -18,7 +18,7 @@ namespace WebAPI_RegInlog.Entities
         public string LastName { get; set; }
         
         [Required]
-        public string Username { get; set; }
+        public string Email { get; set; }
         
         [Required] 
         public byte[] PasswordHash { get; set; }

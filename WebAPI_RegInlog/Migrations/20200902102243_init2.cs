@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace WebAPI_RegInlog.Migrations
 {
-    public partial class init : Migration
+    public partial class init2 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -15,7 +15,7 @@ namespace WebAPI_RegInlog.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FirstName = table.Column<string>(nullable: false),
                     LastName = table.Column<string>(nullable: false),
-                    Username = table.Column<string>(nullable: false),
+                    Email = table.Column<string>(nullable: false),
                     PasswordHash = table.Column<byte[]>(nullable: false),
                     PasswordSalt = table.Column<byte[]>(nullable: false)
                 },
