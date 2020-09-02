@@ -25,5 +25,15 @@ namespace WebAPI_RegInlog.Entities
         
         [Required] 
         public byte[] PasswordSalt { get; set; }
+
+        public void createPasswordHash(string password)
+        {
+            using(var hmac = new System.Security.Cryptography.HMACSHA512())
+            {
+                PasswordSalt = hmac.Key;
+                PasswordHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
+
+            }
+        }
     }
 }
